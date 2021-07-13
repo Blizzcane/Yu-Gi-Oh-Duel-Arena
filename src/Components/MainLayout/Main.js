@@ -4,7 +4,7 @@ import "./Main.css";
 function Main() {
   return (
     <div className="main_container">
-      <LeftPanel />
+      <LeftPanel  />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import "./LeftPanel.css";
+import Detail from "./Detail";
 
-function LeftPanel() {
+function LeftPanel({ card }) {
   return (
     <div className="left_panel">
       <div className="card_pic_container">
@@ -12,6 +13,7 @@ function LeftPanel() {
           />
         </div>
       </div>
+      <Detail   />
     </div>
   );
 }
