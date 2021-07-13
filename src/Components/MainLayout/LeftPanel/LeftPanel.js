@@ -10,7 +10,7 @@ function LeftPanel({ card }) {
           <img
             style={{ height: "100%", width: "100%" }}
             
-            // src={card.card_images[0].image_url}
+            src="https://storage.googleapis.com/ygoprodeck.com/pics/46986414.jpg"
           />
         </div>
       </div>

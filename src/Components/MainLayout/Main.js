@@ -5,7 +5,7 @@ import "./Main.css";
 function Main() {
   const [card, setCard] = useState({});
   fetch(
-    "https://db.ygoprodeck.com/api/v7/cardinfo.php?name=Dark%20Magician%20Girl"
+    "https://db.ygoprodeck.com/api/v7/cardinfo.php?name=Dark%20Magician"
   )
     .then((res) => res.json())
     .then((data) => setCard(data.data[0]));
