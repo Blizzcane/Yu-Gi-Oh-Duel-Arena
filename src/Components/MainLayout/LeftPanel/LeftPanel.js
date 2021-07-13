@@ -1,7 +1,7 @@
 import "./LeftPanel.css";
 import Detail from "./Detail";
 
-function LeftPanel({ card }) {
+function LeftPanel({ card }) { 
   return (
     <div className="left_panel">
       <div className="card_pic_container">
@@ -9,11 +9,12 @@ function LeftPanel({ card }) {
           {/* insert card image here */}
           <img
             style={{ height: "100%", width: "100%" }}
-            src="https://storage.googleapis.com/ygoprodeck.com/pics/6983839.jpg"
+            
+            // src={card.card_images[0].image_url}
           />
         </div>
       </div>
-      <Detail   />
+      <Detail  card={card} />
     </div>
   );
 }

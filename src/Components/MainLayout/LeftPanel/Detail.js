@@ -1,15 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Divider from "@material-ui/core/Divider";
 import Chip from "@material-ui/core/Chip";
 import "./LeftPanel.css";
 
-function Detail( ) {
-  const card = {
-    level: "3",
-    race: "alien",
-    attribute: "dragon",
-  };
-
+function Detail({ card }) {
   const card_type_to_show = {
     MONSTER_NORMAL: "Normal Monster",
     MONSTER_EFFECT: "Effect Monster",
@@ -28,7 +22,7 @@ function Detail( ) {
 
   return (
     <div>
-      <div className="specific">
+      <div className="card">
         <p className="specific_type">{card_type_to_show[card.card_type]}</p>
         <div className="specific_others">
           <img
@@ -41,12 +35,12 @@ function Detail( ) {
             className="specific_others_icon"
             src={"https://ygoprodeck.com/pics/" + card.attribute + ".jpg"}
             title={"Attr: " + card.attribute}
-          /> 
+          />
         </div>
-      </div>
-      <div className="specific_atk_def">
-        <Chip label={"ATK: "  } />
-        <Chip label={"DEF: "   } />
+        <div className="specific_atk_def">
+          <Chip label={"ATK: " + card.atk} />
+          <Chip label={"DEF: " + card.def} />
+        </div>
       </div>
     </div>
   );
